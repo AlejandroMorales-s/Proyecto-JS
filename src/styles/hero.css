@@ -1,0 +1,38 @@
+.hero-btns{
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color:rgba(0,0,0,.7);
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color:#fff;
+    box-shadow: 0 0 10px rgba(255,255,255,.6);
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -o-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -ms-transition:all .3s ease;
+}
+.hero-btns:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+}
+.previus{
+    left:2%;
+    top: calc(33% - 70px);
+}
+.next{
+    right:2%;
+    top: calc(33% - 70px);
+}

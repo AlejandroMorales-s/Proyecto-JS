@@ -47,3 +47,6 @@ p,li,a{
     max-width: 120rem;
     margin: 0 auto;
 }
+.no-display{
+    display: none;
+}
