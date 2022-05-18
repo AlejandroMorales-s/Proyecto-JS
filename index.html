@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="src/assets/logo.svg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eShop</title>
+    <!--- CSS --->
+    <link rel="stylesheet" href="src/styles/index.css">
+    <!--- Normalize --->
+    <link rel="stylesheet" href="src/css/normalize.css">
 </head>
 <body>
-    
+    <header>
+        <div class="nav-container container">
+            <div class="logo-container">
+                <a class="logo-link" href="index.html">
+                    <img class="logo" src="src/assets/logo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="search-product">
+                <input class="products-input" type="text">
+                <button class="products-button">Search</button>
+            </div>
+            <div class="icons">
+                <lord-icon
+                class="icon"
+                src="https://cdn.lordicon.com/aoggitwj.json"
+                trigger="hover"
+                colors="primary:#121331"
+                state="hover">
+                </lord-icon>
+                <lord-icon
+                class="icon"
+                src="https://cdn.lordicon.com/kkcllwsu.json"
+                trigger="hover">
+                </lord-icon>
+        </div>
+        <nav class="nav">
+            <ul class="nav-btns">
+                <li ><a class="nav-btn" href="#">Payment Method</a></li>
+                <li ><a class="nav-btn" href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 </body>
+<script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
 </html>
