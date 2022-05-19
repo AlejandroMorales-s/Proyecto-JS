@@ -59,7 +59,8 @@ class FetchTemplate {
                 //* Creating the product price
                 const productPrice = document.createElement('p');
                 productPrice.classList.add('product-price');
-                productPrice.innerHTML = `$${price}`;
+                let formatedPrice = price.toLocaleString('en-US');
+                productPrice.innerHTML = `$${formatedPrice}`;
 
                 //* Creating the product name
                 const productName = document.createElement('h3');
@@ -75,6 +76,31 @@ class FetchTemplate {
                 const productInfo = document.createElement('div');
                 productInfo.classList.add('product-info');
                 productInfo.appendChild(productPrice);
+                if (discount != 0) {
+                    let disc = price / 100;
+                    let newPrice = disc * discount - price;
+                    newPrice -= newPrice * 2; 
+                    newPrice = newPrice.toLocaleString('en-US')
+            
+                    const discountPrice = document.createElement('p');
+                    discountPrice.classList.add('product-price', 'product-discount-price', 'product-price-card');
+                    discountPrice.innerHTML = `$${newPrice}`;
+                    
+            
+                    const discountInfo = document.createElement('p');
+                    discountInfo.classList.add('product-discount-info');
+                    discountInfo.innerHTML = `${discount}% OFF`;
+                    
+                    const discountContainer = document.createElement('div');
+                    discountContainer.classList.add('product-discount-container');
+                    discountContainer.appendChild(discountPrice);
+                    discountContainer.appendChild(discountInfo);
+            
+                    productPrice.classList.add('old-price');
+                    productPrice.classList.remove('product-price', 'product-price-desc');
+                    
+                    productInfo.appendChild(discountContainer);
+                }
                 productInfo.appendChild(productName);
                 productInfo.appendChild(productDescription);
 
@@ -84,6 +110,7 @@ class FetchTemplate {
                 productContainer.id = id;
                 productContainer.appendChild(imgContainer);
                 productContainer.appendChild(productInfo);
+
 
                 container.appendChild(productContainer);
             }

@@ -47,9 +47,11 @@ function mostrarImagen(imagesArray, name, sizes, colors, brand, price, descripti
     title.classList.add('product-name');
     title.innerHTML = name;
 
+    
     const productPrice = document.createElement('p');
     productPrice.classList.add('product-price', 'product-price-desc');
-    productPrice.innerHTML = `$${price}`;
+    let formatedPrice = price.toLocaleString('en-US');
+    productPrice.innerHTML = `$${formatedPrice}`;
     
     const size = document.createElement('p');
     size.classList.add('product-sizes');
@@ -58,7 +60,7 @@ function mostrarImagen(imagesArray, name, sizes, colors, brand, price, descripti
     const color = document.createElement('p');
     color.classList.add('product-color');
     color.innerHTML = `<span class="bold">Colores:</span> ${colors}`;
-
+    
     const stockInfo = document.createElement('p');
     stockInfo.classList.add('product-stock');
     stockInfo.innerHTML = `<span class="bold">Stock:</span> ${stock}`;
@@ -70,7 +72,7 @@ function mostrarImagen(imagesArray, name, sizes, colors, brand, price, descripti
     const favoritesButton = document.createElement('button');
     favoritesButton.classList.add('favorites-btn');
     favoritesButton.innerHTML = 'Agregar a favoritos';
-
+    
     const addToCartButton = document.createElement('button');
     addToCartButton.classList.add('add-to-cart-btn');
     addToCartButton.innerHTML = 'Agregar al carrito';
@@ -86,11 +88,36 @@ function mostrarImagen(imagesArray, name, sizes, colors, brand, price, descripti
     productDescriptionContainer.appendChild(brandName);
     productDescriptionContainer.appendChild(title);
     productDescriptionContainer.appendChild(productPrice);
+    if (discount != 0) {
+        let disc = price / 100;
+        let newPrice = disc * discount - price;
+        newPrice -= newPrice * 2; 
+        newPrice = newPrice.toLocaleString('en-US')
+
+        const discountPrice = document.createElement('p');
+        discountPrice.classList.add('product-price', 'product-discount-price', 'product-price-desc');
+        discountPrice.innerHTML = `$${newPrice}`;
+        
+
+        const discountInfo = document.createElement('p');
+        discountInfo.classList.add('product-discount-info');
+        discountInfo.innerHTML = `${discount}% OFF`;
+        
+        const discountContainer = document.createElement('div');
+        discountContainer.classList.add('product-discount-container');
+        discountContainer.appendChild(discountPrice);
+        discountContainer.appendChild(discountInfo);
+
+        productPrice.classList.add('old-price');
+        productPrice.classList.remove('product-price', 'product-price-desc');
+        
+        productDescriptionContainer.appendChild(discountContainer);
+    }
     productDescriptionContainer.appendChild(size);
     productDescriptionContainer.appendChild(color);
     productDescriptionContainer.appendChild(stockInfo);
     productDescriptionContainer.appendChild(buttonsContainer);
-    
+
     //* Creating the product overall container
     const productOverlay = document.createElement('div');
     productOverlay.classList.add('product-overlay', 'container');

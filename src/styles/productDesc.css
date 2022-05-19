@@ -35,6 +35,16 @@
     font-size: 3rem;
     margin: 0 0 1rem 0;
 }
+.product-discount-container{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    align-items: center;
+}
+.product-discount-info{
+    color: var(--primary-color);
+    font-weight: 600;
+}
 .product-color{
     margin: 1rem 0;
 }

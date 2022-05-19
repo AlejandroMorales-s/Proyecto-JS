@@ -84,3 +84,8 @@ p,li,a{
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
 }
+.old-price{
+    text-decoration: line-through;
+    font-size: 1.6rem;
+    color: var(--ligth-gray);
+}
