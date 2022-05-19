@@ -3,6 +3,12 @@ const productsContainer = document.querySelector('.products-container');
 const form = document.getElementById('form');
 const input = document.getElementById('input');
 const btn = document.getElementById('input-btn');
+const all = document.getElementById('all');
+const sports = document.getElementById('sports');
+const tech = document.getElementById('tech');
+const video = document.getElementById('video');
+const home = document.getElementById('home');
+const toys = document.getElementById('toys');
 
 class FetchTemplate {
     static allProducts(products) {
@@ -84,3 +90,27 @@ form.addEventListener('submit', e => {
     FetchTemplate.byName(name);
 });
 
+all.onclick = () => {
+    container.innerHTML = '';
+    FetchTemplate.allProducts('/products');
+}
+tech.onclick = () => {
+    container.innerHTML = '';
+    FetchTemplate.byCategory('technology');
+}
+sports.onclick = () => {
+    container.innerHTML = '';
+    FetchTemplate.byCategory('sports');
+}
+video.onclick = () => {
+    container.innerHTML = '';
+    FetchTemplate.byCategory('video');
+}
+home.onclick = () => {
+    container.innerHTML = '';
+    FetchTemplate.byCategory('home');
+}
+toys.onclick = () => {
+    container.innerHTML = '';
+    FetchTemplate.byCategory('toys');
+}

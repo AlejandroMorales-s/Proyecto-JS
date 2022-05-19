@@ -1,0 +1,25 @@
+.filter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    gap: 2rem;
+}
+.filter-btn{
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: calc(5rem / 4) calc(5rem / 2);
+    background-color: transparent;
+    border-radius: 6rem;
+    -webkit-border-radius: 6rem;
+    -moz-border-radius: 6rem;
+    -ms-border-radius: 6rem;
+    -o-border-radius: 6rem;
+    transition: all .15s ease;
+}
+.filter-btn:hover{
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: var(--white);
+}
