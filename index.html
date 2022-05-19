@@ -9,7 +9,6 @@
     <!--- CSS --->
     <link rel="stylesheet" href="src/styles/index.css">
     <!--- Normalize --->
-    <link rel="stylesheet" href="src/css/normalize.css">
 </head>
 <body>
     <header>
@@ -20,8 +19,10 @@
                 </a>
             </div>
             <div class="search-product">
-                <input class="products-input" type="text">
-                <button class="products-button">Search</button>
+                <form id="form" action="">
+                    <input name="input" id="input" class="products-input" type="text">
+                    <button id="input-btn" class="products-button">Search</button>
+                </form>
             </div>
             <div class="icons">
                 <lord-icon
@@ -49,7 +50,11 @@
         <div id="previus" class="hero-btns previus"><</div>
         <div id="next" class="hero-btns next">></div>
     </div>
+    <main>
+        <div id="products" class="products container"></div>
+    </main>
 </body>
 <script src="src/js/heroFetch.js" type="module"></script>
+<script src="src/js/fetchTemplate.js" type="module"></script>
 <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
 </html>
