@@ -1,4 +1,4 @@
-import { carrousel } from './carruselFunction.js';
+import { carrousel } from './carrouselFunction.js';
 const container = document.getElementById('hero-container');
 
 fetch("http://localhost:3000/heroimgs")
