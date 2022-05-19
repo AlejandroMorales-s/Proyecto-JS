@@ -75,3 +75,12 @@ class FetchTemplate {
     }
 }
 
+FetchTemplate.allProducts('/products');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    container.innerHTML = '';
+    const name = input.value;
+    FetchTemplate.byName(name);
+});
+
