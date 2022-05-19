@@ -38,6 +38,10 @@
     width: 100%;
     object-fit: contain;
 }
+.product-price{
+    font-size: 2rem;
+    margin-top: 2.25rem;
+}
 .product-description{
 
     display: -webkit-box;
