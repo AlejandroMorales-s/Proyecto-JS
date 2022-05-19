@@ -1,3 +1,13 @@
+.hero-container{
+    height: 34rem;
+    width: 100%;
+    position: relative;
+}
+.hero-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .hero-btns{
     font-size: 30px;
     width: 70px;
@@ -30,9 +40,9 @@
 }
 .previus{
     left:2%;
-    top: calc(33% - 70px);
+    top: calc(60% - 70px);
 }
 .next{
     right:2%;
-    top: calc(33% - 70px);
+    top: calc(60% - 70px);
 }

@@ -11,6 +11,7 @@ fetch("http://localhost:3000/heroimgs")
     const heroImg = document.createElement('img');
     heroImg.src = heroImgs[0];
     heroImg.alt = "hero image";
+    heroImg.classList.add('hero-img');
 
     container.appendChild(heroImg);
 
