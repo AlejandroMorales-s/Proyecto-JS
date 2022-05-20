@@ -60,7 +60,8 @@
         "favs cart";
 }
     
-.buy-btn {
+.buy-btn,
+.cart-refresh-btn {
     grid-area: buy;
     background-color: var(--primary-color);
     color: var(--white);
@@ -70,7 +71,8 @@
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
 }
-.buy-btn:hover { 
+.buy-btn:hover,
+.cart-refresh-btn:hover { 
     background-color: var(--white);
     color: var(--primary-color);
 }

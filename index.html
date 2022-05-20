@@ -24,20 +24,6 @@
                     <button id="input-btn" class="products-button">Search</button>
                 </form>
             </div>
-            <div class="icons">
-                <lord-icon
-                class="icon"
-                src="https://cdn.lordicon.com/aoggitwj.json"
-                trigger="hover"
-                colors="primary:#121331"
-                state="hover">
-                </lord-icon>
-                <lord-icon
-                class="icon"
-                src="https://cdn.lordicon.com/kkcllwsu.json"
-                trigger="hover">
-                </lord-icon>
-            </div>
             <nav class="nav">
                 <ul class="nav-btns">
                     <li ><a class="nav-btn" href="#">Payment Method</a></li>
@@ -54,15 +40,21 @@
         <button id="all" class="filter-btn">Todos</button>
         <button id="sports" class="filter-btn">Deportes</button>
         <button id="tech" class="filter-btn">Tecnologia</button>
-        <button id="video" class="filter-btn">Video</button>
-        <button id="home" class="filter-btn">Hogar</button>
-        <button id="toys" class="filter-btn">Juguetes</button>
+
     </div>
     <main>
+        <div class="favs-container container">
+            <div class="cart-info">
+                <h3>Carrito:</h3>
+                <button class="cart-refresh-btn">Comprar ahora</button>
+            </div>
+            <div class="cart"></div>
+        </div>
         <div id="products" class="products container"></div>
     </main>
 </body>
 <script src="src/js/heroFetch.js" type="module"></script>
 <script src="src/js/fetch.js" type="module"></script>
+<script src="src/js/cartBtn.js" ></script>
 <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-</html>
+</html> 

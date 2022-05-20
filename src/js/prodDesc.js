@@ -1,4 +1,5 @@
 import {carrouselProd} from './carrouselFunction.js';
+import { addToCart } from './cart.js';
 function mostrarImagen(imagesArray, name, sizes, colors, brand, price, description, stock, discount, id) { 
     //* Creating the product info
     // Generar la imagen
@@ -76,6 +77,9 @@ function mostrarImagen(imagesArray, name, sizes, colors, brand, price, descripti
     const addToCartButton = document.createElement('button');
     addToCartButton.classList.add('add-to-cart-btn');
     addToCartButton.innerHTML = 'Agregar al carrito';
+    addToCartButton.addEventListener('click', () => {
+        addToCart();
+    });
 
     const buttonsContainer = document.createElement('div');
     buttonsContainer.classList.add('buttons-container');

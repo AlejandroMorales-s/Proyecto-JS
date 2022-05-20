@@ -153,15 +153,3 @@ sports.onclick = () => {
     container.innerHTML = '';
     FetchTemplate.byCategory('sports');
 }
-video.onclick = () => {
-    container.innerHTML = '';
-    FetchTemplate.byCategory('video');
-}
-home.onclick = () => {
-    container.innerHTML = '';
-    FetchTemplate.byCategory('home');
-}
-toys.onclick = () => {
-    container.innerHTML = '';
-    FetchTemplate.byCategory('toys');
-}

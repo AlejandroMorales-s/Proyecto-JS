@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
-    margin-top: 5rem;
+    margin: 5rem auto;
 }
 .product-container{
     border: 2px solid var(--ligth-gray);

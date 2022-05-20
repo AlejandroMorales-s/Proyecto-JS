@@ -1,0 +1,32 @@
+.cart{
+    overflow: auto;
+    display: flex;
+    gap: 2rem;
+    height: max-content;
+    border-bottom: 1px solid var(--ligth-gray);
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+.cart-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.cart-item{
+    width: 25rem;
+    height: 10rem;
+    display: flex;
+    border-right: 1px solid var(--ligth-gray);
+}
+.cart-item-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cart-name, 
+.cart-price{
+    font-size: 1.5rem;
+}
