@@ -1,5 +1,6 @@
 import {carrouselProd} from './carrouselFunction.js';
 import { addToCart } from './cart.js';
+import { addToFavorites } from './favorites.js';
 function mostrarImagen(imagesArray, name, sizes, colors, brand, price, description, stock, discount, id) { 
     //* Creating the product info
     // Generar la imagen
@@ -73,6 +74,9 @@ function mostrarImagen(imagesArray, name, sizes, colors, brand, price, descripti
     const favoritesButton = document.createElement('button');
     favoritesButton.classList.add('favorites-btn');
     favoritesButton.innerHTML = 'Agregar a favoritos';
+    favoritesButton.addEventListener('click', () => {
+        addToFavorites();
+    });
     
     const addToCartButton = document.createElement('button');
     addToCartButton.classList.add('add-to-cart-btn');

@@ -1,4 +1,5 @@
-.cart{
+.cart,
+.favs{
     overflow: auto;
     display: flex;
     gap: 2rem;
@@ -7,12 +8,16 @@
     margin-top: 2rem;
     padding: 1rem 0;
 }
-.cart-info{
+.cart-info,
+.fav-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 100%;
+}
+.fav-info{
+    margin-top: 5rem;
 }
 .cart-item{
     width: 25rem;
